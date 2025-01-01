@@ -7,7 +7,9 @@ exports.showData = async () => {
 }
 
 exports.showDataById = async (id) => {
-    return await Helper.findByPk(id);
+    return {
+        data: await Helper.findByPk(id)
+    };
 }
 
 exports.createData = async (val) => {
